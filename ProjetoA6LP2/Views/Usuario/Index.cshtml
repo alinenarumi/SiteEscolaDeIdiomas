@@ -1,0 +1,51 @@
+﻿@using PagedList.Mvc;
+
+@model PagedList.IPagedList<ProjetoA6LP2.Dominio.Entidades.Usuario>
+
+@{
+    ViewBag.Title = "Gerênciamento de Usuários";
+}
+<ol class="breadcrumb">
+    <li><em>Você está aqui:</em> @Html.ActionLink("Home", "Index", "Home")</li>
+    <li class="active">Gerênciar Usuários</li>
+</ol>
+
+<div class="pagina-conteudo">
+    <h2>Gerênciamento de Usuários</h2>
+    <p>@Html.ActionLink("Adiconar Novo Usuário", "Incluir")</p>
+
+    <div>
+        <table class="table" border="0">
+            <tr>
+                <th>Login</th>
+                <th>Nome completo</th>
+            </tr>
+            @foreach (var usuario in Model)
+            {
+                <tr>
+                    <td>
+                        <a href="#" class="thumbnail inner-border usuario-link">
+                            <img src="~/Images/icons/camera25.png"
+                                 width="150" height="150" />
+                            <p style="text-align: center; padding-top: 5px;">@Html.LabelForModel(usuario.Login)</p>
+                        </a>
+                    </td>
+                    <td>
+                        @usuario.NomeUsuario
+                        <br />
+                        <br />
+                        <div>
+                            @Html.ActionLink("Editar", "Edit", new { id = usuario.Login }) |
+                            @Html.ActionLink("Alterar Senha", "Details", new { id = usuario.Login }) |
+                            @Html.ActionLink("Deletar", "Delete", new { id = usuario.Login })
+                        </div>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <strong>Página @Model.PageNumber de @Model.PageCount </strong><br />
+    <span class="btn-group">
+        @Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))
+    </span>
+</div>

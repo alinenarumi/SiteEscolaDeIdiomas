@@ -1,6 +1,5 @@
 ﻿
-div#barra-superior {
-}
+div#barra-superior { }
 
 #logo {
     margin-left: 10px;
@@ -34,13 +33,17 @@ div#barra-superior {
     height: 50px;
 }
 
+.pagina-conteudo {
+    margin: 5px;
+}
+
 footer#rodape {
     border-top: 1px solid #cecece;
     padding-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
-    margin: 3px;
+    margin: 5px;
 }
 
 footer#rodape p#direitos {
@@ -49,4 +52,9 @@ footer#rodape p#direitos {
 
 .limpar {
     clear: both;
+}
+
+.usuario-link {
+    width: 160px;
+    height: 160px;
 }
