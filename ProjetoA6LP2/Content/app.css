@@ -1,4 +1,39 @@
 ﻿
+div#barra-superior {
+}
+
+#logo {
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+    top: 4px;
+    float: left;
+}
+
+#logo #img-logo {
+    width: 70px;
+    height: 70px;
+}
+
+.logo-texto {
+    font-size: 14pt;
+    font-weight: bolder;
+    color: #808080;
+}
+
+#foto-usuario {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 30px;
+    position: relative;
+    float: right;
+}
+
+#foto-usuario #img-usuario {
+    width: 50px;
+    height: 50px;
+}
+
 footer#rodape {
     border-top: 1px solid #cecece;
     padding-top: 10px;
@@ -10,4 +45,8 @@ footer#rodape {
 
 footer#rodape p#direitos {
     font-size: 10pt;
+}
+
+.limpar {
+    clear: both;
 }

@@ -100,6 +100,11 @@
     <Content Include="fonts\jquery-2.1.4.min.js" />
     <Content Include="fonts\npm.js" />
     <Content Include="Global.asax" />
+    <Content Include="Images\icons\logo_azul.png" />
+    <Content Include="Images\icons\logo_roxo.png" />
+    <Content Include="Images\icons\Offi_User.png" />
+    <Content Include="Images\icons\user.png" />
+    <Content Include="Images\icons\user43.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -130,7 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
