@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace ProjetoA6LP2.Dominio.Entidades
 {
     [Table("Usuario")]
-    public class Usuario
+    public partial class Usuario
     { 
         [Key]
-        public String Login { get; set; }
-        public String NomeUsuario { get; set; }
-        public String Senha { get; set; }
+        public string Login { get; set; }
+        public string NomeUsuario { get; set; }
+        public string Senha { get; set; }
         public byte[] Imagem { get; set; }
-        public String ImagemTipo { get; set; }
+        public string ImagemTipo { get; set; }
     }
 }

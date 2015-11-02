@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoA6LP2.Dominio.Entidades
 {
-    public class ModeloContexto : DbContext
+    public partial class ModeloContexto : DbContext
     {
         public ModeloContexto() :
             base("name=conexao_escola_idioma_db")
@@ -20,6 +20,11 @@ namespace ProjetoA6LP2.Dominio.Entidades
                 new CreateDatabaseIfNotExists<ModeloContexto>());
         }
 
+        public DbSet<Aluno> Alunoes { get; set; }
+        public DbSet<AlunoCompraPacote> AlunoCompraPacotes { get; set; }
+        public DbSet<Curso> Cursoes { get; set; }
+        public DbSet<Pacote> Pacotes { get; set; }
+        public DbSet<PacoteTemCurso> PacoteTemCursoes { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
     }
 }
